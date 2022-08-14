@@ -1,22 +1,23 @@
 import React from "react";
-import Colors from "./styles/colors";
-import { Back_Container } from "./styles/global";
-import { Routes, Route, Link } from "react-router-dom";
+import { BackContainer } from "./styles/global";
+import { Routes, Route } from "react-router-dom";
+import Sidebar from "./comps/Sidebar";
 
 // Routes
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import Page_Not_Found from "./Pages/Page_Not_Found";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App = () => {
   return (
-    <Back_Container>
+    <BackContainer>
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="*" element={<Page_Not_Found /> } />
+        <Route path="*" element={<PageNotFound /> } />
       </Routes>
-    </Back_Container>
+    </BackContainer>
   );
 }
 
