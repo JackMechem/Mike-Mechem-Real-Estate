@@ -1,9 +1,10 @@
 import React from "react";
+import { PageContainer } from "../styles/global";
 
 const Sellers = () => {
-    return(<div>
-        <h1>Sellers</h1>
-    </div>)
+    return (<PageContainer>
+        Sellers
+    </PageContainer>)
 }
 
 export default Sellers;

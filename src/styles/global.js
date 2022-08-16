@@ -47,7 +47,7 @@ const Paragraph = styled.p`
 const ContentContainer = styled.div`
     position: relative;
     width: 100%;
-    overflow-x: scroll;
+    overflow-y: scroll;
 `
 
 const PageContainer = styled.div`
@@ -78,29 +78,47 @@ const PageImageTitle = styled.p`
     font-size: 40px;
     margin: 10px 20px;
     color: ${Colors.primary};
+    text-shadow: 3px 3px 3px ${Colors.color[0]};
 `
 
 const PageImageSubTitle = styled.p`
     color: ${Colors.primary};
+    text-shadow: 3px 3px 3px ${Colors.color[0]};
 `
 
-const Footer = styled.div`
+const Foot = styled.div`
     position: static;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     width: auto;
+    height: 100px;
     bottom: 0px;
 
-    padding: 30px;
+    padding: 10px 30px;
     margin: 10px;
 
-    background-color: ${Colors.color[1]};
+    /* background-color: ${Colors.color[1]}; */
+    /* color: white; */
     /* border: solid ${Colors.color[2]} 1px; */
-    border-radius: 10px;
+
 `
 
-const FooterText = styled.p`
+const FooterTextLeft = styled.p`
+    /* position: absolute; */
+    color: ${Colors.primary};
+
+    font-size: large;
 `
 
+const FooterTextRight = styled.a`
+    position: absolute;
+    color: ${Colors.primary};
+    right: 40px;
+    font-size: large;
+`
 export {
     BackContainer,
     ButtonPill,
@@ -112,6 +130,7 @@ export {
     PageImageTitle,
     PageImageSubTitle,
     PageImageTitleContainer,
-    Footer,
-    FooterText
+    Foot,
+    FooterTextLeft,
+    FooterTextRight,
 }

@@ -18,7 +18,7 @@ const SideBarContainer = styled.div`
     align-items: center;
 `
 const SideBarHandle = styled.button`
-    align-self: flex-end;
+    /* align-self: flex-end;
     margin-bottom: 10px;
     margin-left: 10px;
     height: 50px;
@@ -32,7 +32,30 @@ const SideBarHandle = styled.button`
     color: ${Colors.foreground};
     cursor: pointer;
     position: absolute;
-    z-index: 1000;
+    z-index: 1000; */
+    background: transparent;
+    color: ${Colors.primary};
+    height: 55px;
+    width: 55px;
+    margin: 10px;
+    border: none;
+    border-radius: 90px;
+    font-size: 20px;
+    font-weight: ${props => props.bold ? "bold" : "normal"};
+    align-self: flex-start;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.6;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${Colors.color[1]};
+    }
 `
 
 const LogoImage = styled.img`
