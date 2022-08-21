@@ -5,34 +5,32 @@ const SideContainer = styled.div`
     display: flex;
     height: 100%;
     flex-direction: row;
+    @media (max-width: 768px) {
+        z-index: 1;
+        position: fixed;
+        width: ${props => props.shown ? "100%" : "0px"};
+        height: 100%;
+        border-right: none;
+    }
 `
 
 const SideBarContainer = styled.div`
     width: 300px;
     margin: 0px 0px 0px 0px;
     border-right: solid ${Colors.color[2]} 1px;
-    padding: 20px;
-    display: ${promps => promps.shown ? "flex" : "none"};
+    display: ${promps => promps.shown ? "flex" : "none"};  
     background-color: ${Colors.background};
     flex-direction: column;
     align-items: center;
+    @media (max-width: 768px) {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-right: none;
+    }
 `
 const SideBarHandle = styled.button`
-    /* align-self: flex-end;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 90px;
-    background-color: ${Colors.color[2]};
-    color: ${Colors.foreground};
-    cursor: pointer;
-    position: absolute;
-    z-index: 1000; */
     background: transparent;
     color: ${Colors.primary};
     height: 55px;

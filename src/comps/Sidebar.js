@@ -28,11 +28,12 @@ const Sidebar = () => {
 
     const nav = (route) => {
         navigate(route);
+        setSideBarIsOpen(false);
     }
 
 
 
-    return (<SideContainer>
+    return (<SideContainer shown={sideBarIsOpen}>
 
         <SideBarContainer shown={sideBarIsOpen}>
             <LogoImage src={Logo} height="100px" onClick={() => { nav("/") }} />
